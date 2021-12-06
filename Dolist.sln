@@ -1,22 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31612.314
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dolist.Web", "Dolist.Web\Dolist.Web.csproj", "{3BD9246A-591B-4B0B-BBAE-47A12B5112CB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dolist.Api", "Dolist.Api\Dolist.Api.csproj", "{406B534F-46B7-4BB8-BABB-AB6DA215E23D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{406B534F-46B7-4BB8-BABB-AB6DA215E23D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{406B534F-46B7-4BB8-BABB-AB6DA215E23D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{406B534F-46B7-4BB8-BABB-AB6DA215E23D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{406B534F-46B7-4BB8-BABB-AB6DA215E23D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3BD9246A-591B-4B0B-BBAE-47A12B5112CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3BD9246A-591B-4B0B-BBAE-47A12B5112CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3BD9246A-591B-4B0B-BBAE-47A12B5112CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3BD9246A-591B-4B0B-BBAE-47A12B5112CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E903C9A6-B817-4D19-AD96-679165B4A52C}
 	EndGlobalSection
 EndGlobal
