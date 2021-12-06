@@ -13,3 +13,19 @@ In backend part
 ```
 update-database
 ```
+
+
+## For run backend 
+
+in folder Dolist.Api
+```
+dotnet run 
+```
+
+## For run frontend
+
+in folder Dolist.Client/dolist
+```
+npm install
+npm run start
+```
