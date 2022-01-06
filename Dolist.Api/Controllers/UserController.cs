@@ -1,9 +1,4 @@
-﻿
-using Dolist.Api.Db;
-using Dolist.Api.Db.Entities;
-using Microsoft.AspNetCore.Mvc;
-
-namespace Dolist.Api.Controllers;
+﻿namespace Dolist.Api.Controllers;
 
 [Route("/api/users")]
 public class UserController : Controller
@@ -39,6 +34,4 @@ public class UserController : Controller
         return Ok(user); 
 
     }
-    
-
 }

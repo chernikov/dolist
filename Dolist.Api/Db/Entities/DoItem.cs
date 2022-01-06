@@ -7,6 +7,4 @@ public class DoItem
     public string? Title { get; set; }
 
     public DateTime CreatedDate { get; set;  }
-
-
 }

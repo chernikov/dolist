@@ -1,20 +1,8 @@
-
-using Dolist.Api.Db;
-using Dolist.Api.Db.Options;
-using Microsoft.EntityFrameworkCore;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
-var appSettingsSection = builder.Configuration.GetSection("AppSettings");
-
-var configurationSection = builder.Configuration.GetSection("ConnectionStrings:DefaultConnection");
-builder.Services.Configure<ConnectionOption>((cfg) =>
-{
-    cfg.ConnectionString = configurationSection.Value;
-});
-builder.Services.AddDbContext<DoListDbContext>(options => options.UseSqlServer(configurationSection.Value));
+builder.Services.AddSingleton<ConnectionOptions>();
+builder.Services.AddScoped<DoListDbContext>();
 builder.Services.AddScoped<IDoListDbContext, DoListDbContext>();
 
 builder.Services.AddControllers();
@@ -23,6 +11,15 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+var provider = builder.Services.BuildServiceProvider();
+
+var dbContext = provider.GetService<DoListDbContext>() ?? null!;
+var pendingMigration = dbContext.Database.GetPendingMigrations();
+if (pendingMigration.Any())
+{
+    dbContext.Database.Migrate();
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
